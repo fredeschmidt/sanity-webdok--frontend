@@ -11,7 +11,7 @@
           <!-- <a :href="`/webdokStandard/${webdokStandard.slug.current}`">{{ webdokStandard.heading }}</a> -->
         </li>
       </ul>
-      <p v-else>No webdokStandards to show</p>
+      <p v-else>No webdokStandards to show lige her</p>
       <!-- Resten af din template... -->
     </main>
   </div>

@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import WebdokPage from '@/pages/webdoks/_slug.vue';
+import WebdokPage from '@/pages/webdok/_slug.vue';
 
 const routes = [
   { 
-    path: '/webdoks/:slug', 
+    path: '/webdok/:slug', 
     name: 'Webdok', 
     component: WebdokPage
   },
