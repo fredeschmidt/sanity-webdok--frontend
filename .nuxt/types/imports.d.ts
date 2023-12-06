@@ -109,6 +109,7 @@ declare global {
   const useLazySanityQuery: typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/composables')['useLazySanityQuery']
   const useLink: typeof import('../vue-router-stub')['useLink']
   const useModel: typeof import('../../node_modules/vue')['useModel']
+  const useMySanity: typeof import('../../composables/useMySanity')['useMySanity']
   const useNuxtApp: typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']
   const useNuxtData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']
   const useNuxtDevTools: typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']
@@ -143,6 +144,7 @@ declare global {
 declare global {
   // @ts-ignore
   export type { Component, ComponentPublicInstance, ComputedRef, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode } from '../../node_modules/vue'
+  import('../../node_modules/vue')
 }
 // for vue template auto import
 import { UnwrapRef } from 'vue'
@@ -256,6 +258,7 @@ declare module 'vue' {
     readonly useLazySanityQuery: UnwrapRef<typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/composables')['useLazySanityQuery']>
     readonly useLink: UnwrapRef<typeof import('../vue-router-stub')['useLink']>
     readonly useModel: UnwrapRef<typeof import('../../node_modules/vue')['useModel']>
+    readonly useMySanity: UnwrapRef<typeof import('../../composables/useMySanity')['useMySanity']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
     readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
@@ -397,6 +400,7 @@ declare module '@vue/runtime-core' {
     readonly useLazySanityQuery: UnwrapRef<typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/composables')['useLazySanityQuery']>
     readonly useLink: UnwrapRef<typeof import('../vue-router-stub')['useLink']>
     readonly useModel: UnwrapRef<typeof import('../../node_modules/vue')['useModel']>
+    readonly useMySanity: UnwrapRef<typeof import('../../composables/useMySanity')['useMySanity']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
     readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>

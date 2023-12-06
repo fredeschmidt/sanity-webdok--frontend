@@ -11,8 +11,9 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import sanityClient from '@/plugins/sanity'; // Erstat med din korrekte importsti til Sanity klienten
+import { useMySanity } from '@/composables/useMySanity';
 
+const sanityClient = useMySanity();
 const route = useRoute();
 const webdok = ref(null);
 const loading = ref(false);
@@ -20,8 +21,12 @@ const loading = ref(false);
 const slug = route.params.slug; // Henter slug fra URL'en
 const query = `*[_type == "webdokStandard" && slug.current == $slug][0]`;
 
+console.log("Slug før mount:", slug);
+
 onMounted(async () => {
-  console.log("Slug:", slug);
+  
+  console.log("Slug efter mount:", slug);
+
   loading.value = true;
   try {
     webdok.value = await sanityClient.fetch(query, { slug });
